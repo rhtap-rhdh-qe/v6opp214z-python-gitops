@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: v6opp214z-python-gitops
+  description: This is GitOps manifest for v6opp214z-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=v6opp214z-python
+    backstage.io/kubernetes-id: v6opp214z-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: v6opp214z-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:v6opp214z-python
